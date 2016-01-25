@@ -41,4 +41,10 @@ class NewRelicPlugin extends BasePlugin
 		}
 	}
 
+	public function addTwigExtension()
+	{
+		Craft::import('plugins.newrelic.twigextensions.NewRelicTwigExtension');
+		return new NewRelicTwigExtension();
+	}
+
 }
